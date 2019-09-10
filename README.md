@@ -1,88 +1,67 @@
-## Keybase [![Build Status](https://travis-ci.org/keybase/client.svg?branch=master)](https://travis-ci.org/keybase/client) [![Build status](https://ci.appveyor.com/api/projects/status/90mxorxtj6vixnum/branch/master?svg=true)](https://ci.appveyor.com/project/keybase/client-x5qrt/branch/master)
+### Keybase proof
 
-Hi, and welcome to the Keybase client repo.  All our client apps (macOS,
-Windows, Linux, iOS, and Android) are being actively developed in this
-repository. Please, dig around.
+I hereby claim:
 
-### Warnings
+  * I am abdrahem on github.
+  * I am adi599 (https://keybase.io/adi599) on keybase.
+  * I have a public key ASDpaz-sru2vpRMJOsxvhnRLWkNH8JCoQPVnIMfc1GweOAo
 
-We'd love you to read our source code.
+To claim this, I am signing this object:
 
-But - some of the things in this repo are explorations, and the app you build
-from source just *might not do what it says it's doing*. So, if you just want
-to install Keybase on your computer, you should **[monitor our releases](https://keybase.io/download)** for macOS, Linux, or Windows.
+```json
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e96b3facaeedafa513093acc6f86744b5a4347f090a840f56720c7dcd46c1e380a",
+      "host": "keybase.io",
+      "kid": "0120e96b3facaeedafa513093acc6f86744b5a4347f090a840f56720c7dcd46c1e380a",
+      "uid": "58da2ff394e514ffb2a939a4ce8ce419",
+      "username": "adi599"
+    },
+    "merkle_root": {
+      "ctime": 1568131374,
+      "hash": "7bfd4cf94e0f6662cd101fda53b48186eb0eaed1e21c2dcfd246d7295667118370a4f6e0eb1e74ef4b019cf7cf5a1c4a1617a9d5557b28b2ca73794692973ea2",
+      "hash_meta": "6b263e3ea39b63db091b97c31ce83221bf804a1f61aeca45efed1925e2c0e906",
+      "seqno": 6452757
+    },
+    "service": {
+      "entropy": "eQth14qh5xc+xPBYeI1KqB5t",
+      "name": "github",
+      "username": "abdrahem"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.0"
+  },
+  "ctime": 1568131387,
+  "expire_in": 504576000,
+  "prev": "15f63c0d6e31a7fd81cc5f1259cac729f8cf761b9405687a875d37eec4da1f4a",
+  "seqno": 7,
+  "tag": "signature"
+}
+```
 
-![Sharing](https://keybase.io/images/github/repo_share.png?)
+with the key [ASDpaz-sru2vpRMJOsxvhnRLWkNH8JCoQPVnIMfc1GweOAo](https://keybase.io/adi599), yielding the signature:
 
+```
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6Ws/rK7tr6UTCTrMb4Z0S1pDR/CQqED1ZyDH3NRsHjgKp3BheWxvYWTESpcCB8QgFfY8DW4xp/2BzF8SWcrHKfjPdhuUBWh6h1037sTaH0rEIN/JUPmAs3XyhoZDKxyCXhmGGdSzyDsr4vDMtKfleitLAgHCo3NpZ8RAZAmk/TWhJLRfUqI6l0zNsT1NB/CHdN6ImmFuVBqycdCewWrCq1sZ5pjMcFd+wGP/gFNBKE+fsz1+NI8fPtJwDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDi9cKpNQ0Klny7btw7gQiKH06fHzeR4WkZ4wYj18CVho3RhZ80CAqd2ZXJzaW9uAQ==
 
-### Code Layout
+```
 
-* **go**: Core crypto libraries; the Keybase service; the command line client. [Learn More](go/README.md)
-* **shared/{android,ios}**: Android and iOS apps developed with [React Native](https://facebook.github.io/react-native/).
-* **shared/desktop**: Desktop application for macOS, Linux, and Windows, made with the [Electron](https://github.com/atom/electron) framework, sharing React code with react-native.
-* **packaging**: Scripts for releasing packages across the various platforms.
-* **protocol**: Defines the protocol for communication for clients to the Keybase services. Uses [Avro](http://avro.apache.org/docs/1.7.7/). [Learn More](protocol/README.md)
-* **media**: Icons, graphics, media for Keybase apps.
-* **osx**: The macOS Keybase.app, development parallel to an Electron-based application above. [Learn More](osx/README.md)
+And finally, I am proving ownership of the github account by posting this as a gist.
 
-### Problems?
+### My publicly-auditable identity:
 
-Report any issues with client software on this GitHub
-[issue tracker](https://github.com/keybase/client/issues).
-Internally, we track our progress using Jira, but all PRs come through GitHub
-for your review!
+https://keybase.io/adi599
 
-If you're having problems with the command line `keybase` client, take a
-look at [the troubleshooting doc](go/doc/troubleshooting.md).
+### From the command line:
 
-If you're having problems with our Website, try the
-[keybase-issues](https://github.com/keybase/keybase-issues) issue tracker.
+Consider the [keybase command line program](https://keybase.io/download).
 
-We check and update both frequently.
-
-### License
-
-Most code is released under the New BSD (3 Clause) License.  If subdirectories
-include a different license, that license applies instead.
-
-### Development Guidelines
-
-We check all git commits with pre-commit hooks generated via
-[pre-commit.com](http://pre-commit.com) pre-commit hooks.
-To enable use of these pre-commit hooks:
-
-* [Install](http://pre-commit.com/#install) the `pre-commit` utility. For some common cases:
-  * `pip install pre-commit`
-  * `brew install pre-commit`
-* Remove any existing pre-commit hooks via `rm .git/hooks/pre-commit`
-* Configure via `pre-commit install`
-
-Then proceed as normal.
-
-#### External Contributors
-
-If you forked this repository on GitHub and made a PR, then it'll show up as
-having failed Jenkins CI. We do not build external PRs because it's a security
-risk to do so without a review first. If your PR is successfully reviewed by a
-member of the Keybase team, then we will merge your commits to a branch on our
-primary fork and build from there.
-
-
-### Cryptography Notice
-
-This distribution includes cryptographic software. The country in which you
-currently reside may have restrictions on the import, possession, use, and/or
-re-export to another country, of encryption software. BEFORE using any
-encryption software, please check your country's laws, regulations and policies
-concerning the import, possession, or use, and re-export of encryption
-software, to see if this is permitted. See http://www.wassenaar.org/ for more
-information.
-
-The U.S. Government Department of Commerce, Bureau of Industry and Security
-(BIS), has classified this software as Export Commodity Control Number (ECCN)
-5D002.C.1, which includes information security software using or performing
-cryptographic functions with asymmetric algorithms. The form and manner of this
-distribution makes it eligible for export under the License Exception ENC
-Technology Software Unrestricted (TSU) exception (see the BIS Export
-Administration Regulations, Section 740.13) for both object code and source
-code.
+```bash
+# look me up
+keybase id adi599
+```
